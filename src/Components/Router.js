@@ -6,22 +6,27 @@ import {
   Switch,
 } from "react-router-dom";
 import Home from "Routes/Home";
+import MojitoPrivacy from "Routes/MojitoPrivacy";
 import { Helmet } from "react-helmet";
 
-export default () => (
-  <>
-    <Router>
-      {/* <Helmet>
-      <link
-        rel="shortcut icon"
-        type="image/png"
-        href="https://junwoolee.me/favicon.png"
-      />
-    </Helmet> */}
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Redirect from="*" to="/" />
-      </Switch>
-    </Router>
-  </>
-);
+const RouterComponent = () => {
+  return (
+    <>
+      <Router>
+        <Helmet>
+          <link
+            rel="shortcut icon"
+            type="image/png"
+            href="https://victorlee917.github.io/blender_2020/favicon.png"
+          />
+        </Helmet>
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Redirect from="*" to="/" />
+        </Switch>
+      </Router>
+    </>
+  );
+};
+
+export default RouterComponent;

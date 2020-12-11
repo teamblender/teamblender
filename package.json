@@ -9,14 +9,18 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "react": "^16.13.1",
+    "react": "^17.0.1",
+    "react-device-detect": "^1.12.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.0.0",
     "react-page-scroller": "^2.0.7-beta",
+    "react-player": "^2.0.1",
+    "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
     "react-scroll": "^1.7.16",
     "react-view-pager": "^0.6.0",
+    "redux": "^4.0.5",
     "styled-components": "^5.1.0",
     "styled-reset": "^4.1.3"
   },
@@ -24,11 +28,14 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
+  "homepage": "/",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -40,5 +47,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
   }
 }
